@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+    --dark-purple: #512051;
+    --light-purple: #927B91;
+    --bg-rating: #F7F2F7;
+    --dark-pink: #EE69A4;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    line-height: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    bottom: 1.6rem;
+    left: 0;
+    right: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.container {
+    padding: 11.8rem 16.5rem 10rem;
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social__text {
+    max-width: 44.5rem;
+    height: 24.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social__title {
+    font-size: 5.6rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+    line-height: 4.8rem;
+}
+
+.social__description {
+    font-weight: 500;
+
+    color: var(--light-purple);
+    font-size: 1.9rem;
+}
+
+.social__ratings {
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 54rem;
+    justify-content: space-between;
+}
+
+.rating {
+    background-color: var(--bg-rating);
+    border-radius: .8rem;
+    display: flex;
+    padding: 2rem 0 2rem 3.2rem;
+    line-height: 0;
+    align-items: center;
+    width: 44.5rem;
+}
+
+.rating:nth-child(2) {
+    align-self: center;
+}
+
+.rating:nth-child(3) {
+    align-self: flex-end;
+}
+
+.stars {
+    margin-right: 3.245rem;
+}
+
+.rating p {
+    color: var(--dark-purple);
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 0.9;
+}
+
+.img__star {
+    display: inline-block;
+}
+
+.img__star:not(:last-child) {
+    margin-right: .845rem;
+}
+
+.background__bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.background__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    min-height: 26.6rem;
+    margin-top: 7.1rem;
+}
+
+.review {
+    background-color: var(--dark-purple);
+    padding: 4rem 3.2rem 3.5rem;
+    color: white;
+    max-width: 35rem;
+    border-radius: .8rem;
+    display: inline-block;
+    height: min-content;
+}
+
+.review:nth-child(2) {
+    align-self: center;
+}
+
+.review:nth-child(3) {
+    align-self: flex-end;
+}
+
+.buyer {
+    display: flex;
+}
+
+.buyer figure {
+    max-width: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 2.3rem;
+}
+
+.buyer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.buyer-info :is(h3, h2) {
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.buyer-info h3 {
+    color: var(--dark-pink);
+    font-weight: 300;
+}
+
+.review__desc {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    margin-top: 3.1rem;
+    letter-spacing: -0.303571px;
+}
+
+@media (max-width: 376px) {
+
+    html, body {
+        height: min-content;
+        min-height: min-content;
+        position: relative;
+    }
+    .container {
+        padding: 8.2rem 2.4rem 9.9rem;
+    }
+    .social-proof {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .social__text {
+        height: min-content;
+    }
+
+    .social__title {
+        font-size: 4rem;
+        line-height: 3.2rem;
+    }
+
+    .social__description {
+        margin-top: 3.9rem;
+    }
+
+    .social__ratings {
+        margin-top: 3.9rem;
+        height: min-content;
+        width: 100%;
+    }
+    
+    .rating {
+        height: 7.8rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1.6rem 0;
+        justify-content: space-between;
+        width: 100%;
+        align-self: center !important;
+    }
+
+    .rating:not(:last-child) {
+        margin-bottom: 1.6rem;
+    }
+
+    .stars {
+        margin-right: 0;
+    }
+
+    .reviews {
+        flex-direction: column;
+        margin-top: 4.9rem;
+    }
+
+    .review {
+        margin-bottom: 1.6rem;
+    }
+
+    .background__bottom {
+        left: 0;
+        z-index: -1;
+    }
+
+    .bg-bottom__img {
+        width: 100%;
+    }
+}
